@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .row
+    .content.col-md-8.offset-md-2
+      .row
+        h1.col-md-12 New Diary Creation
+          p Leave your outputs and relearn yourself
+      .row
+        .col-md-6.offset-md-3
+          form(action='/tech_diaries/new' method='POST')
+            .row.diary_title(style='padding:10% 0%;')
+              label.col-md-3 Title
+              input.col-md-9.rounded(type='text' name='diaryTitle' style='border:1px solid black;background-color:rgba(0,0,0,0);')
+            .row.diary_body(style='padding:10% 0%;')
+              label.col-md-3 Body
+              textarea.col-md-9.rounded(type='text' name='diaryBody' style='border:1px solid black;background-color:rgba(0,0,0,0);')
+            .submission.text-center(style='padding:10% 0%;')
+              input.btn.btn-primary(type='submit')

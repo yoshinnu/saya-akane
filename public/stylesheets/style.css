@@ -1,0 +1,33 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-image: url('https://www.pakutaso.com/shared/img/thumb/akanesaya501IMGL3229_TP_V.jpg');
+}
+
+table tr th {
+	border-bottom: 1px solid black;
+}
+
+.undo_td, .undo_td:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.brand {
+	padding: 30px;
+}
+
+.header_btn {
+	padding: 40px;
+}
+
+.header_btn:hover {
+	background-color: #9bdcc9;
+}
+
+.content {
+	background-color: rgba(255,255,255,0.4);
+}

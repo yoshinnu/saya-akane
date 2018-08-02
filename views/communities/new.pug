@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  .row
+    .content.col-md-8.offset-md-2
+      .row
+        h1.col-md-12 New Diary Creation
+          p Leave your outputs and relearn yourself
+      .row
+        .col-md-6.offset-md-3
+          form(action='/communities/new' method='POST')
+            .row.community_title(style='padding:10% 0%;')
+              label.col-md-3 CommunityTitle
+              input.col-md-9.rounded(type='text' name='communityTitle' style='border:1px solid black;background-color:rgba(0,0,0,0);')
+            .row.owner_name(style='padding:10% 0%;')
+              label.col-md-3 Owner
+              select.col-md-9(name='owner' size='1')
+                -for (let i = 0; i < users.length; i++)
+                  option= users[i].dataValues.user_name
+            .submission.text-center(style='padding:10% 0%;')
+              input.btn.btn-primary(type='submit')

@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  form(action='/signup' method='POST')
+    .username
+      label username
+      input(type='text' name='user_name')
+    .email
+      label email
+      input(type='text' name='email')
+    .passport
+      label password
+      input(type='password' name='password')
+    .signup
+      input(type='submit')

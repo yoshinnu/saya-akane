@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .row
+    .content.col-md-8.offset-md-2
+      .row
+        h1.col-md-12 What do you want to share with your friends?
+          p Tell them what you learned
+        h3.col-md-6.offset-md-6
+          a(href='/communities/new') NewCommunity
+      .row
+        table.col-md-12
+          tr.row
+            th.col-md-6 CommunityTitle
+            th.col-md-6 Owner
+          -for (let i = 0; i < communities.length; i++)
+            tr.row
+              td.col-md-6= communities[i].dataValues.community_title
+              td.col-md-6= communities[i].dataValues.owner
